@@ -6,5 +6,6 @@ project(test_jnum)
 find_package(jnum REQUIRED)
 
 add_library(libtestjnum INTERFACE)
+target_link_libraries(libtestjnum INTERFACE jnum::jnum)
 include(CTest)
 add_subdirectory(src)
